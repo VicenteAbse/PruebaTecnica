@@ -1,0 +1,21 @@
+.avatarImg{
+    border-radius: 50%;
+    width: 100px;
+  }
+
+  .circular--landscape {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    width: 150px;
+    
+  }
+  
+  .circular--landscape img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+
+

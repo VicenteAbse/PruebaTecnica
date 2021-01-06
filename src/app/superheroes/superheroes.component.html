@@ -1,0 +1,43 @@
+<br>
+<br>
+<br>
+<div class="container">
+    <input type="text" [(ngModel)]="nombre" (input)="Search()" placeholder="Buscar por nombre">
+    <br>
+    <br>
+    <table class="table table-bordered" *ngIf="errorApi == false">
+        <thead class="thead-light">
+            <tr>
+                <th>Superhéroes</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let superheroe of listaSuperheroes">
+
+                        <td>
+                            <div class="d-flex">
+                                <div class="circular--landscape">
+                                    <img [src]="superheroe.avatarURL">
+                                </div>
+                                <div class="col p-2">
+                                    
+                                    <h5>{{superheroe.nombre}}</h5>
+                                    <small>{{superheroe.nombreReal}}</small>
+                                </div>
+
+                            </div>
+                            
+                        </td>
+   
+            </tr>
+        </tbody>
+    </table>
+
+    <div *ngIf="errorApi == true">
+
+        Error al obtener los datos :(
+    </div>
+</div> 
+
+  
